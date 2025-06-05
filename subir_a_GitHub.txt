@@ -1,0 +1,6 @@
+git init
+git remote add origin https://github.com/gmcon/clics.git
+git add .
+git commit -m "Primer commit del registro de clics con Flask"
+git branch -M main
+git push -u origin main
