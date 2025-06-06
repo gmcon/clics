@@ -32,6 +32,16 @@ def confirmar():
     </html>
     """
 
+@app.route('/ver_registros')
+def ver_registros():
+    if not os.path.exists(REGISTRO):
+        return "<p>No hay registros aún.</p>"
+    
+    with open(REGISTRO, 'r') as f:
+        contenido = f.read().replace('\n', '<br>')
+    
+    return f"<html><body><h2>Registros de clics:</h2><p>{contenido}</p></body></html>"
+
 @app.route('/')
 def home():
     return "<p>Servidor funcionando. Usa /confirmar?id=... para registrar clics.</p>"
