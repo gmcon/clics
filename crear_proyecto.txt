@@ -1,0 +1,4 @@
+mkdir registro_clics
+cd registro_clics
+python -m venv venv
+.\venv\Scripts\activate
